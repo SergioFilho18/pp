@@ -5,16 +5,16 @@ const Footer = () => {
               {/* Seção de Informações de Contato Adicionada */}
               <div className="mt-8 mb-8 text-sm md:text-base">
                 <p>
-                  <span className="font-bold">E-mail:</span> contato@suaempresa.com
+                  <span className="font-bold font-sans text-sm leading-relaxed">E-mail:</span> contato@suaempresa.com
                 </p>
                 <p className="mt-1">
-                  <span className="font-bold">CNPJ:</span> 04.693.020/0001-46
+                  <span className="font-bold font-sans text-sm leading-relaxed">CNPJ:</span> 04.693.020/0001-46
                 </p>
                 <p className="mt-1">
-                  <span className="font-bold">Telefone:</span>(17) 3421-2515
+                  <span className="font-bold font-sans text-sm leading-relaxed">Telefone:</span>(17) 3421-2515
                 </p>
                 <p className="mt-1">
-                  <span className="font-bold">Endereço: </span>Av. Emílio Arroio Hernandes, 2087 - Pozzobon, Votuporanga - SP, 15503-027
+                  <span className="font-bold font-sans text-sm leading-relaxed">Endereço: </span>Av. Emílio Arroio Hernandes, 2087 - Pozzobon, Votuporanga - SP, 15503-027
                 </p>
               </div>
 

@@ -6,13 +6,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // 1. ATUALIZADO: Lista expandida para 7 produtos
 const products = [
-  { id: 1, name: 'Coolers', image: '/produto1.jpeg' },
-  { id: 2, name: 'Canivetes', image: '/produto2.jpeg' },
-  { id: 3, name: 'Chapéus', image: '/produto3.jpeg' },
-  { id: 4, name: 'Botas', image: '/produto4.jpeg' },
-  { id: 5, name: 'Parafusadeiras', image: '/produto5.jpeg' },
-  { id: 6, name: 'Jogo de Chaves', image: '/produto6.jpeg' },
-  { id: 7, name: 'Kits de Ferramentas', image: '/produto7.jpeg' },
+  { id: 1, name: 'Coolers', image: '/produto1.webp' },
+  { id: 2, name: 'Canivetes', image: '/produto2.webp' },
+  { id: 3, name: 'Chapéus', image: '/produto3.webp' },
+  { id: 4, name: 'Botas', image: '/produto4.webp' },
+  { id: 5, name: 'Parafusadeiras', image: '/produto5.webp' },
+  { id: 6, name: 'Jogo de Chaves', image: '/produto6.webp' },
+  { id: 7, name: 'Kits de Ferramentas', image: '/produto7.webp' },
 ];
 
 const ProductCarousel = () => {
@@ -43,19 +43,20 @@ const ProductCarousel = () => {
       </div>
 
       <div className="w-full relative group">
-        {/* Conteúdo do Carrossel */}
+        
         <div className="w-full h-[70vh] md:h-[70vh] overflow-hidden relative">
           <Image
             src={products[currentIndex].image}
             alt={products[currentIndex].name}
             layout="fill"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={70}
             objectFit="contain"
-            className="transition-opacity duration-500 ease-in-out" // Trocado para transição de opacidade
           />
         </div>
 
-        {/* Nome do produto e botão do WhatsApp agora abaixo da imagem */}
-        <div className="w-full text-center bg-white"> {/* Adicionado um background branco para o texto e botão */}
+        
+        <div className="w-full text-center bg-white"> 
           <h3 className="text-5xl lg:text-5xl font-bold text-blue-950">{products[currentIndex].name}</h3>
           
         </div>

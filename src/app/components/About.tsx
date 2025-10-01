@@ -65,7 +65,7 @@ export default function About() {
                     {/* Adicione 'relative' ao contêiner da imagem para que 'fill' funcione */}
                     <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center relative overflow-hidden">
                       <Image
-                        src={'/polizeli.png'}
+                        src={'/polizeli.webp'}
                         alt="Nossa loja"
                         fill
                         style={{ objectFit: 'cover' }}
@@ -120,8 +120,8 @@ export default function About() {
                    {/* Adicione 'relative' ao contêiner da imagem para que 'fill' funcione */}
                     <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center relative overflow-hidden">
                       <Image
-                        src={'/eqpipoli.png'}
-                        alt="Nossa loja"
+                        src={'/eqpipoli.webp'}
+                        alt="Nossa equipe"
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -172,7 +172,7 @@ export default function About() {
                     href={news.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300 inline-flex items-center"
+                    className="font-display uppercase tracking-wider text-sm no-underline hover:underline text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300 inline-flex items-center"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Ler reportagem completa
@@ -188,19 +188,19 @@ export default function About() {
 
         {/* Destaques em números */}
         <section className="bg-blue-800 text-white rounded-2xl p-8 md:p-12 mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Nossa Trajetória em Números</h2>
+          <h2 className="font-display font-extrabold tabular-nums tracking-tighter text-4xl @lg:text-5xl md:text-3xl text-center mb-12">Nossa Trajetória em Números</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">+25</div>
-              <div className="text-xl">Anos de Mercado</div>
+              <div className="font-display tabular-nums tracking-tighter  @lg:text-5xl text-4xl md:text-5xl font-bold mb-2">+25</div>
+              <div className="font-sans uppercase text-xl">Anos de Mercado</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">+50 mil</div>
-              <div className="text-xl">Clientes Satisfeitos</div>
+              <div className="font-display tabular-nums tracking-tighter @lg:text-5xl text-4xl md:text-5xl font-bold mb-2">+50 mil</div>
+              <div className="font-sans uppercase text-xl">Clientes Satisfeitos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">+15 mil</div>
-              <div className="text-xl">Produtos Inovadores</div>
+              <div className="font-display tabular-nums tracking-tighter  @lg:text-5xl text-4xl md:text-5xl font-bold mb-2">+15 mil</div>
+              <div className="font-sans uppercase text-xl">Produtos Inovadores</div>
             </div>
           </div>
         </section>

@@ -5,8 +5,8 @@ import MinimalVideoPlayer from './MinimalVideoPlayer';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const videos = [
-  { id: 1, src: './video.mp4' },
-  { id: 2, src: './video2.mp4' },
+  { id: 1, src: './video.mp4', poster: '/posterV1.webp' },
+  { id: 2, src: './video2.mp4', poster: '/posterV2.webp' },
 ];
 
 export default function MeuVideoPlayer() {
@@ -63,6 +63,7 @@ export default function MeuVideoPlayer() {
                 <MinimalVideoPlayer
                   key={videos[currentVideoIndex].id}
                   src={videos[currentVideoIndex].src}
+                  poster={videos[currentVideoIndex].poster}
                 />
               </div>
 
@@ -83,7 +84,7 @@ export default function MeuVideoPlayer() {
           ) : (
             <div className="flex flex-row gap-8 md:gap-16 justify-center">
               {videos.map((video) => (
-                <MinimalVideoPlayer key={video.id} src={video.src} />
+                <MinimalVideoPlayer key={video.id} src={video.src} poster={videos[currentVideoIndex].poster} />
               ))}
             </div>
           )}

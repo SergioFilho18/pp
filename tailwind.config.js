@@ -14,9 +14,15 @@ module.exports = {
     extend: {
       // Adicionando a fonte 'Inter' que importamos no CSS
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
+        display: ['var(--font-montserrat)', 'var(--font-inter)', ...fontFamily.sans],
       },
-      // Exemplo de como extender outras propriedades
+      letterSpacing: {
+        tighter: '-0.02em',   // bom para títulos
+        normal: '0em',
+        wide: '0.02em',
+        wider: '0.05em',      // ótimo para botões/labels
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -24,8 +30,10 @@ module.exports = {
     },
   },
 
-  // 3. Onde você adiciona plugins do Tailwind
   plugins: [
-    require('@tailwindcss/container-queries')
-  ],
+    require('@tailwindcss/container-queries'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('tailwindcss-animate'),
+  ]
 };
